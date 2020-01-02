@@ -1,6 +1,6 @@
 /*Write a function to return missing numbers from an unsorted array
  *of numbers that may contain duplicates. 
- *For example: findMissingNums([2, 6, 4, 8, 6]) should return [3, 5, 7]
+ *For example: findMissingNums([5, 3, 2, 8, 5]) should return [4, 6, 7]
  */
 
  // First solution
