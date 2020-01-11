@@ -7,13 +7,6 @@
 
 //First solution
 function palindrome(str) {
-  let reversed = str
-    .split("")
-    .reverse()
-    .join("");
-  return str.toLowerCase() === reversed.toLowerCase();
-}
-function palindrome(str) {
   let reversed = [...str].reverse().join("");
   return str.toLowerCase() === reversed.toLowerCase();
 }
@@ -22,27 +15,18 @@ function palindrome(str) {
 
 //Second solution
 function palindrome(str) {
-  return str
-    .split("")
-    .every((char, i) => char === str.toLowerCase()[str.length - i - 1]);
-}
-function palindrome(str) {
   const strArr = [...str];
-  return strArr.every(
-    function (char, i) {
-      return  char.toLowerCase() === strArr[strArr.length - i - 1].toLowerCase()
-    }
-  );
+  return strArr.every(function(char, i) {
+    return char.toLowerCase() === strArr[strArr.length - i - 1].toLowerCase();
+  });
 }
 
 /*********************************************************/
 
 //Third solution
 function palindrome(str) {
-  let reversed = str.split("").reduce((acc, cur) => cur + acc);
-  return str.toLowerCase() === reversed.toLowerCase();
-}
-function palindrome(str) {
-  let reversed = [...str].reduce(function(acc, cur) {return cur + acc;});
+  let reversed = [...str].reduce(function(acc, cur) {
+    return cur + acc;
+  });
   return str.toLowerCase() === reversed.toLowerCase();
 }
