@@ -29,8 +29,9 @@ function palindrome(str) {
 function palindrome(str) {
   const strArr = [...str];
   return strArr.every(
-    (char, i) =>
-      char.toLowerCase() === strArr[strArr.length - i - 1].toLowerCase()
+    function (char, i) {
+      return  char.toLowerCase() === strArr[strArr.length - i - 1].toLowerCase()
+    }
   );
 }
 
@@ -38,10 +39,10 @@ function palindrome(str) {
 
 //Third solution
 function palindrome(str) {
-  let reversed = str.split("").reduce((rev, char) => char + rev);
+  let reversed = str.split("").reduce((acc, cur) => cur + acc);
   return str.toLowerCase() === reversed.toLowerCase();
 }
 function palindrome(str) {
-  let reversed = [...str].reduce((rev, char) => char + rev);
+  let reversed = [...str].reduce(function(acc, cur) {return cur + acc;});
   return str.toLowerCase() === reversed.toLowerCase();
 }
