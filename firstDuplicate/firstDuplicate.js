@@ -1,4 +1,4 @@
-/*Write a function that takes an argument of an array of 
+/*Write a function that takes an argument of an array of
  *numbers and returns the first duplicate.
  *Example: findFirstDupl([2, 4, 5, 1, 3, 5, 4]) returns 4
  */
@@ -6,16 +6,17 @@
 function findFirstDupl(arr) {
   let numMap = {};
   for (const num of arr) {
-    numMap[num] = numMap[num] ? numMap[num] + 1 : 1;
+    if (!numMap[num]) {
+      numMap[num] = 1;
+    } else {
+      numMap[num]++;
+    }
     //Or
-    //if (!numMap[num]) {
-    //numMap[num] = 1;
-    // }else {
-    //numMap[num] ++;
-    //}
+    //numMap[num] = numMap[num] ? numMap[num] + 1 : 1;
   }
   for (const num in numMap) {
     if (numMap[num] > 1) {
+      console.log(num);
       return num;
     }
   }
