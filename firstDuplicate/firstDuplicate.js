@@ -15,7 +15,7 @@ function findFirstDupl(arr) {
     //numMap[num] = numMap[num] ? numMap[num] + 1 : 1;
   }
   for (const num in numMap) {
-    if (numMap[num] > 1) {
+    if (numMap[num] === 2) {
       console.log(num);
       return num;
     }
