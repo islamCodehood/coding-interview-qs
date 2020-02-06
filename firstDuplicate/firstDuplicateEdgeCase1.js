@@ -16,7 +16,6 @@ function findFirstDupl(arr) {
             numMap[arr[i]]['count'] ++
         }
     }
-    console.log(numMap)
     for (const num in numMap) {
         if (numMap[num]['count'] === 2) {
             if (numMap[num]['index'] < minIndex) {
