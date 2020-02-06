@@ -33,7 +33,12 @@ function buildCharMap(str) {
     let charMap = {};
     const cleanedStr = str.replace(/[^\w]/g, "").toLowerCase()
     for (const char of cleanedStr) {
-        charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
+        //charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
+        if (charMap[char]) {
+          charMap[char] ++
+        } else {
+          charMap = 1
+        }
     }
     return charMap;
 }
