@@ -5,7 +5,7 @@ function anagram(stringA, stringB) {
 
 function cleanString(str) {
   const cleanedStr = str
-    .replace(/[^\w]/g, "")
+    .replace(/[^\w]|_/g, "")
     .toLowerCase()
     .split("")
     .sort()
@@ -31,7 +31,7 @@ function anagram(stringA, stringB) {
 
 function buildCharMap(str) {
     let charMap = {};
-    const cleanedStr = str.replace(/[^\w]/g, "").toLowerCase()
+    const cleanedStr = str.replace(/[^\w]|_/g, "").toLowerCase()
     for (const char of cleanedStr) {
         //charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
         if (charMap[char]) {
