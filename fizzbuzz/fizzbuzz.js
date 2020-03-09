@@ -1,7 +1,8 @@
-//Write a function that takes an argument of n number and console log the numbers
-//from 1 to n, with exceptions:
-//if the number is multiplies of 3 console log fizz
-//if the number is multiplies of 5 console log buzz
+/*Write a function that takes an argument of n number and console log the numbers
+ *from 1 to n, with exceptions:
+ *if numbers which are multiplies of 3 console log fizz
+ *if numbers which are multiplies of 5 console log buzz
+ *and finally if numbers are multiplies of both 3, and 5 console log fizzbuzz.*/
 
 
 
