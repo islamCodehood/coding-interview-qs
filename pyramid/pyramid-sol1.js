@@ -10,3 +10,17 @@
  *           ' ### '
  *           '#####'
  */
+
+function pyramid(n) {
+  for (let row = 1; row <= n; row++) {
+    let level = "";
+    for (let col = 1; col <= 2 * n - 1; col++) {
+      if (n - row < col && col - row < n) {
+        level += "#";
+      } else {
+        level += " ";
+      }
+    }
+    console.log(level);
+  }
+}
