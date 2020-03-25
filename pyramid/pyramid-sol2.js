@@ -11,19 +11,20 @@
  *           '#####'
  */
 
-function pyramid(n, row = 0, level = "") {
-  if (row === n) {
+function pyramid(n, row = 1, stair = "") {
+  if (row > n) {
     return;
   }
-  if (level.length === 2 * n - 1) {
-    console.log(level);
+  if (stair.length === 2 * n - 1) {
+    console.log(stair);
     return pyramid(n, row + 1);
   }
-  const midPoint = Math.floor((2 * n - 1) / 2);
-  if (midPoint + row >= level.length && midPoint - row <= level.length) {
-    level += "#";
+
+  let add;
+  if (n - row < stair.length + 1 && n + row > stair.length + 1) {
+    add = "#";
   } else {
-    level += " ";
+    add = " ";
   }
-  pyramid(n, row, level)
+  pyramid(n, row, stair + add);
 }
