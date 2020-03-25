@@ -27,4 +27,3 @@ function pyramid(n, row = 0, level = "") {
   }
   pyramid(n, row, level)
 }
-pyramid(3)

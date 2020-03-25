@@ -25,4 +25,3 @@ function pyramid(n) {
     console.log(level);
   }
 }
-pyramid(3);
