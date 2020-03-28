@@ -16,7 +16,7 @@ function pyramid(n) {
   for (let row = 0; row < n; row++) {
     let level = "";
     for (let col = 0; col < 2 * n - 1; col++) {
-      if (midPoint + row >= col && midPoint - row <= col) {
+      if (col + row >= midPoint && col - row <= midPoint) {
         level += "#";
       } else {
         level += " ";
