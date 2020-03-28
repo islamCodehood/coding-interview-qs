@@ -1,4 +1,4 @@
-/*Write a function that takes a number argument, and
+/*Write a function that takes a number argument n, and
  *prints a pyramid shape with n levels using the #
  *character like in these examples:
  *pyramid(1) '#'
